@@ -1,0 +1,83 @@
+﻿Eastern, Newfoundland and Labrador
+Central, Newfoundland and Labrador
+Western, Newfoundland and Labrador
+Labrador-Grenfell, Newfoundland and Labrador
+Bas-Saint-Laurent, Quebec
+Saguenay - Lac-Saint-Jean, Quebec
+la Capitale-Nationale, Quebec
+la Mauricie et du Centre-du-Quebec, Quebec
+l'Estrie, Quebec
+Montreal, Quebec
+l'Outaouais, Quebec
+l'Abitibi-Temiscamingue, Quebec
+la Cote-Nord, Quebec
+Nord-du-Quebec, Quebec
+la Gaspesie -Ìles-de-la-Madeleine, Quebec
+la Chaudilere-Appalaches, Quebec
+Laval, Quebec
+LanaudiÌere, Quebec
+Laurentides, Quebec
+la Monteregie, Quebec
+Erie St. Clair, Ontario
+South West, Ontario
+Waterloo Wellington, Ontario
+Hamilton Niagara Haldimand Brant, Ontario
+Central West, Ontario
+Mississauga Halton, Ontario
+Toronto Central, Ontario
+Central, Ontario
+Central East, Ontario
+South East, Ontario
+Champlain, Ontario
+North Simcoe Muskoka, Ontario
+North East, Ontario
+North West, Ontario
+District of Algoma, Ontario
+Brant County, Ontario
+Durham, Ontario
+Elgin-St. Thomas, Ontario
+Grey Bruce, Ontario
+Haldimand-Norfolk, Ontario
+Haliburton, Kawartha, Pine Ridge, Ontario
+Halton, Ontario
+City of Hamilton, Ontario
+Hastings and Prince Edward Counties, Ontario
+Huron County, Ontario
+Chatham-Kent, Ontario
+Kingston, Frontenac and Lennox and Addington, Ontario
+Lambton, Ontario
+Leeds, Grenville and Lanark, Ontario
+Middlesex-London, Ontario
+Niagara Area, Ontario
+Northwestern, Ontario
+City of Ottawa, Ontario
+Oxford County, Ontario
+Peel, Ontario
+Perth, Ontario
+Peterborough County-City, Ontario
+Porcupine, Ontario
+Renfrew County and, Ontario
+Eastern Ontario, Ontario
+Sudbury and, Ontario
+Thunder Bay, Ontario
+Timiskaming, Ontario
+Waterloo, Ontario
+Wellington-Dufferin-Guelph, Ontario
+Windsor-Essex County, Ontario
+York, Ontario
+City of Toronto, Ontario
+Sun Country, Saskatchewan
+Five Hills, Saskatchewan
+Cypress, Saskatchewan
+Regina Qu'Appelle, Saskatchewan
+Sunrise, Saskatchewan
+Saskatoon, Saskatchewan
+Heartland, Saskatchewan
+Kelsey Trail, Saskatchewan
+Prince Albert Parkland, Saskatchewan
+Prairie North, Saskatchewan
+South Zone, Alberta
+Calgary Zone, Alberta
+Central Zone, Alberta
+Edmonton Zone, Alberta
+North Zone, Alberta

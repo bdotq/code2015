@@ -1,0 +1,114 @@
+Geography,latitude,longitude,accuracy,status code
+"Annapolis Valley, Nova Scotia [1223-C] ",44.973533,-64.981175,8,200
+"Brant County, Ontario [3527-A] ",43.141841,-80.260768,3,200
+"Calgary, Alberta [4832-B] ",50.990952,-114.136226,3,200
+"Cape Breton,Nova Scotia [1258-I] ",46.214471,-59.962166,5,200
+"Capital, Nova Scotia [1269-A] ",46.266586,-63.149606,8,200
+"Central East, Ontario [3509] ",43.605095,-79.632376,8,200
+"Central, Ontario [3508] ",43.134766,-79.128296,3,200
+"Central, Newfoundland and Labrador [1012-I] ",47.551693,-52.771142,5,200
+"Central West, Ontario [3505] ",43.576283,-79.64462,5,200
+"Central, Alberta [4833-E] ",44.948767,-122.994009,8,200
+"Champlain, Ontario [3511] ",45.394913,-75.135252,8,200
+"Chatham-Kent, Ontario [3540-C] ",42.264895,-81.984977,9,200
+"City of Hamilton, Ontario [3537-A] ",43.248258,-79.810524,3,200
+"City of Ottawa, Ontario [3551-B] ",45.415817,-75.667688,9,200
+"City of Toronto, Ontario [3595-G] ",43.596209,-79.513664,9,200
+"Colchester East Hants/Cumberland, Nova Scotia [1230-C] ",45.038926,-63.712632,3,200
+"Cypress, Saskatchewan [4703-D] ",49.904249,-109.483829,5,200
+"Algoma, Ontario [3526-C] ",49.215649,-84.776806,5,200
+"Durham, Ontario [3530-B] ",44.199078,-78.98953,5,200
+"Eastern Ontario, Ontario [3558-A] ",43.6589,-79.336599,5,200
+"Eastern, Newfoundland and Labrador [1011-C] ",49.588056,-57.909286,5,200
+"Edmonton, Alberta [4834-B] ",53.528452,-113.588571,3,200
+"Elgin-St. Thomas, Ontario [3531-A] ",42.767743,-81.238653,3,200
+"Erie St. Clair, Ontario [3501] ",43.248702,-79.853566,5,200
+"Five Hills, Saskatchewan [4702-D] ",50.391798,-105.523657,3,200
+"Fraser, British Columbia [5920] (86)",49.159766,-122.918499,8,200
+"Grey Bruce, Ontario [3533-D] ",44.468308,-81.109455,5,200
+"Haldimand-Norfolk, Ontario [3534-A] ",43.170585,-80.257315,3,200
+"Haliburton, Kawartha, Pine Ridge, Ontario [3535-A] ",44.042975,-77.735537,3,200
+"Halton, Ontario [3536-B] ",45.355296,-75.939192,5,200
+"Hamilton Niagara Haldimand Brant, Ontario [3504] ","42.927685,-79.876197",,,602
+"Hastings and Prince Edward Counties, Ontario [3538-A] ",44.061042,-77.562637,8,200
+"Heartland, Saskatchewan [4707-D] ",51.470286,-109.162298,3,200
+"Huron County, Ontario [3539-D] ",43.778838,-81.396469,5,200
+"Interior, British Columbia [5910] (86)",49.482142,-119.575525,3,200
+"Interlake-Eastern, Manitoba [4603-E] (11)",50.14301,-96.871791,3,200
+"Kelsey Trail, Saskatchewan [4708-D] ",52.866164,-104.591587,5,200
+"Kingston, Frontenac and Lennox and Addington, Ontario [3541-A] ",44.222141,-76.571997,5,200
+"Labrador-Grenfell, Newfoundland and Labrador [1014-H] ",52.941257,-66.910567,5,200
+"Lambton, Ontario [3542-A] ",42.657699,-82.203285,8,200
+"Leeds, Grenville and Lanark, Ontario [3543-A] ",44.854741,-76.01297,5,200
+"Mamawetan/Keewatin/Athabasca, Saskatchewan [4714-F] (12)","52.939916,-106.450864",,,602
+"Middlesex-London, Ontario [3544-A] ",43.020324,-81.121532,8,200
+"Mississauga Halton, Ontario [3506] ",43.522004,-79.68226,8,200
+"Niagara Area, Ontario [3546-A] ",43.066324,-79.718509,5,200
+"North Bay Parry Sound, Ontario [3547-C] (9)",45.338888,-80.038001,8,200
+"North East, Ontario [3513] ",44.545578,-78.541736,5,200
+"North Simcoe Muskoka, Ontario [3512] ",44.749451,-79.334036,8,200
+"North West, Ontario [3514] ",43.697715,-79.610445,8,200
+"North, Alberta [4835-E] ",23.270994,-106.425594,5,200
+"Northern, British Columbia [5950] (86)",53.827677,-122.720812,8,200
+"Northern, Manitoba [4604-F] (11)",56.346565,-94.717871,5,200
+Northwest Territories [6101-E] (58),21.478893,-104.88979,8,200
+"Northwestern, Ontario [3549-H] ",45.40335,-75.742785,5,200
+"Nunavut [6201-F] (14,58)",70.299771,-83.107577,3,200
+"Oxford County, Ontario [3552-A] ",43.133394,-81.027365,5,200
+"Peel, Ontario [3553-J] ",43.375874,-80.706949,5,200
+"Perth, Ontario [3554-D] ",44.366816,-76.487728,8,200
+"Peterborough County-City, Ontario [3555-A] ",44.229408,-78.212373,8,200
+"Pictou County /Guysborough Antigonish Strait, Nova Scotia [1240-C] ",45.577609,-62.651094,3,200
+"Porcupine, Ontario [3556-C] ",45.339628,-75.945305,5,200
+"Prairie Mountain, Manitoba [4602-D] (11)","53.760861,-98.813876",,,602
+"Prairie North, Saskatchewan [4710-H] ",51.449507,-105.445433,5,200
+"Prince Albert Parkland, Saskatchewan [4709-H] ",53.199583,-105.770293,3,200
+Prince Edward Island [1100-A] (4),43.936566,-77.264461,8,200
+"Regina Qu'Appelle, Saskatchewan [4704-A] ",50.440497,-104.601367,3,200
+"Renfrew County and, Ontario [3557-D] ",45.637796,-77.574221,8,200
+"l'Abitibi-Témiscamingue, Quebec [2408-C] ","52.939916,-73.549136",,,602
+"l'Estrie, Quebec [2405-A] ",45.405765,-71.894997,3,200
+"l'Outaouais, Quebec [2407-A] ",45.630625,-75.816315,3,200
+"la Capitale-Nationale, Quebec [2403-A] ",46.796962,-71.249253,3,200
+"la Chaudière-Appalaches, Quebec [2412-D] ","46.698168,-71.299277",,,601
+"la Côte-Nord, Quebec [2409-H] ",50.213874,-66.375484,3,200
+"la Gaspésie - Îles-de-la-Madeleine, Quebec [2411-I] ","49.094471,-66.692797",,,602
+"la Mauricie et du Centre-du-Québec, Quebec [2404-C] ","45.59694,-73.686883",,,602
+"la Montérégie, Quebec [2416-A] ","48.233696,-79.025328",,,602
+"Lanaudière, Quebec [2414-A] ","46.589382,-72.135892",,,601
+"Laval, Quebec [2413-A] ",45.349236,-73.722783,5,200
+"Montréal, Quebec [2406-G] ","45.606289,-73.561282",,,602
+"Laurentides, Quebec [2415-A] ",45.931439,-74.138593,8,200
+"Bas-Saint-Laurent, Quebec [2401-C] ",47.829071,-69.545458,3,200
+"Nord-du-Québec, Quebec [2410-H] ","45.798177,-74.01795",,,602
+"Saguenay - Lac-Saint-Jean, Quebec [2402-C] ",48.429876,-71.053647,3,200
+"Saskatoon, Saskatchewan [4706-A] ",52.130304,-106.634274,9,200
+"Simcoe Muskoka, Ontario [3560-B] (9)",44.749451,-79.334036,8,200
+"South East, Ontario [3510] ",44.536993,-78.53787,5,200
+"South Shore/South West Nova, Nova Scotia [1210-C] ",45.371217,-63.28593,9,200
+"South West, Ontario [3502] ",42.915576,-80.669643,5,200
+"South, Alberta [4831-A] ",53.523736,-113.641103,9,200
+"Southern, Manitoba [4605-D] (11)",49.834869,-99.952842,8,200
+"Sudbury and, Ontario [3561-C] ",46.419361,-80.957741,8,200
+"Sun Country, Saskatchewan [4701-D] ",49.572655,-101.694949,3,200
+"Sunrise, Saskatchewan [4705-D] ",51.768669,-106.471574,5,200
+"Thunder Bay, Ontario [3562-C] ",42.875787,-79.04734,8,200
+"Timiskaming, Ontario [3563-C] ",47.518311,-79.843353,8,200
+"Toronto Central, Ontario [3507] ",43.610651,-79.493265,5,200
+"Vancouver, British Columbia [5930] (86)",49.263079,-123.099801,8,200
+"Vancouver Island, British Columbia [5940] (86)",49.263079,-123.099801,8,200
+"Waterloo, Ontario [3565-B] ",43.477123,-80.538069,3,200
+"Waterloo Wellington, Ontario [3503] ",43.356764,-80.312518,5,200
+"Wellington-Dufferin-Guelph, Ontario [3566-B] ",43.55428,-80.260363,5,200
+"Western, Newfoundland and Labrador [1013-I] ",47.617966,-52.83869,5,200
+"Windsor-Essex County, Ontario [3568-A] ",42.309117,-83.068378,9,200
+"Winnipeg, Manitoba [4601-A] (11)",49.863922,-97.110525,8,200
+"York, Ontario [3570-J] ",43.038197,-79.852448,3,200
+Yukon [6001-E] (58),31.722265,-106.447446,8,200
+"Moncton area, New Brunswick [1301-C] ",46.109452,-64.767108,3,200
+"Saint John area, New Brunswick [1302-C] ",45.270706,-66.060928,3,200
+"Fredericton area, New Brunswick [1303-C] ",45.941242,-66.65651,3,200
+"Edmundston area, New Brunswick [1304-C] ",47.369013,-68.326674,3,200
+"Campbellton area, New Brunswick [1305-I] ",40.486216,-74.451819,3,200
+"Bathurst area, New Brunswick [1306-I] ",40.486216,-74.451819,3,200
+"Miramichi area, New Brunswick [1307-I] ",47.001983,-65.566378,3,200

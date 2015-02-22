@@ -37,9 +37,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html"><i class="mdi-action-favorite"></i><i class="mdi-maps-local-hospital"></i><i class="mdi-maps-directions-bike"></i><i class="mdi-social-mood"></i>
+        <span class="navbar-brand">
+            <i class="mdi-action-favorite"></i><i class="mdi-maps-local-hospital"></i><i class="mdi-maps-directions-bike"></i><i class="mdi-social-mood"></i>
             Canada Lifestyle & Health Browser
-        </a>
+        </span>
     </div>
     <div class="navbar-collapse collapse navbar-inverse-collapse">
         <!--ul class="nav navbar-nav">
@@ -49,14 +50,61 @@
         </ul-->
 
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="javascript:void(0)">About <i class="mdi-social-whatshot"></i></a></li>
+            <li><a href="javascript:$('#welcomeModal').modal();">About<i class="mdi-social-whatshot"></i></a></li>
 
         </ul>
     </div>
 </div>
 
 
+    
+<!-- WELCOME -->
+    
+<div class="modal fade bs-example-modal-lg" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModalLabel" aria-hidden="false">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="welcomeModalLabel">Canada Lifestyle & Health Browser
+          <i class="mdi-action-favorite mdi-material-pink"></i><i class="mdi-maps-local-hospital mdi-material-blue"></i><i class="mdi-maps-directions-bike mdi-material-brown"></i><i class="mdi-social-mood mdi-material-orange"></i></h1>
+      </div>
+      <div class="modal-body">
+          <p>This app is designed for those curious about Canadian health populations, by city.  If you are curious to know if where you live determines a health status, this is the right app for you. </p>  
+          <p>You can browse different regions in Canada and compare their aggregate scores. Each region provides a unique insight into health status.  This aggregated data includes all sexes, all ages, and with the most recent Canadian data from the CCHS survey.</p>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>    
 
+    <script>$('#welcomeModal').modal();</script>
+    
+    
+    
+<!-- REGION DATA -->
+<div class="modal fade" id="regiondataModal" tabindex="-1" role="dialog" aria-labelledby="regiondataModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="regiondataModalLabel">&nbsp;</h4>
+      </div>
+      <div class="modal-body">
+          
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div> 
+    
+    
+    
+    
+<!-- MAP -->    
    <div id="cm_map"></div> 
 
 
@@ -64,9 +112,7 @@
     
     
     
-<!-- WELCOME -->
-    
-    
+
     
     
     
@@ -112,10 +158,11 @@ var param_iconOverType = "blue";
 function cm_load() {  
   if (GBrowserIsCompatible()) {
     // create the map
-    cm_map = new GMap2(document.getElementById("cm_map"));
-    cm_map.addControl(new GLargeMapControl());
-    cm_map.addControl(new GMapTypeControl());
-    cm_map.setCenter(new GLatLng( 43.907787,-79.359741), 2);
+    //cm_map = new GMap2(document.getElementById("cm_map"));
+    cm_map = new google.maps.Map(document.getElementById("cm_map"));
+    //cm_map.addControl(new GLargeMapControl());
+    //cm_map.addControl(new GMapTypeControl());
+    //cm_map.setCenter(new GLatLng( 43.907787,-79.359741), 2);
     cm_getJSON();
   } else {
     alert("Sorry, the Google Maps API is not compatible with this browser");
@@ -181,9 +228,12 @@ function cm_loadMapJSON(json) {
       var lat = parseFloat(entry["gsx$" + param_latColumn].$t);
       var lng = parseFloat(entry["gsx$" + param_lngColumn].$t);
       var point = new GLatLng(lat,lng);
+
       var html = "<div style='font-size:12px'>";
       html += "<strong>" + entry["gsx$"+param_titleColumn].$t 
               + "</strong>";
+      
+        
       var label = entry["gsx$"+param_titleColumn].$t;
       var rank = 0;
       if(usingRank && entry["gsx$" + param_rankColumn]) {
