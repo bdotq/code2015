@@ -23,6 +23,13 @@
         height:calc(100% - 50px);
     }
     .navbar {margin-bottom: 0}
+        
+    .x-large {
+        font-size: 5em;
+    }
+    .smmargin {
+        margin-top: 3pt;
+    }
     </style>
     
 </head>
@@ -50,7 +57,7 @@
         </ul-->
 
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="javascript:$('#welcomeModal').modal();">About<i class="mdi-social-whatshot"></i></a></li>
+            <li><a href="#" onclick="$('#aboutModal').modal();">About<i class="mdi-social-whatshot"></i></a></li>
 
         </ul>
     </div>
@@ -65,15 +72,17 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h1 class="modal-title" id="welcomeModalLabel">Canada Lifestyle & Health Browser
-          <i class="mdi-action-favorite mdi-material-pink"></i><i class="mdi-maps-local-hospital mdi-material-blue"></i><i class="mdi-maps-directions-bike mdi-material-brown"></i><i class="mdi-social-mood mdi-material-orange"></i></h1>
+        <h1 class="modal-title" id="welcomeModalLabel">Canada Lifestyle & Health Browser</h1>
+          <h1 class="x-large text-center"><i class="mdi-action-favorite mdi-material-pink"></i><i class="mdi-maps-local-hospital mdi-material-blue"></i><i class="mdi-maps-directions-bike mdi-material-brown"></i><i class="mdi-social-mood mdi-material-orange"></i></h1>
       </div>
       <div class="modal-body">
           <p>This app is designed for those curious about Canadian health populations, by city.  If you are curious to know if where you live determines a health status, this is the right app for you. </p>  
           <p>You can browse different regions in Canada and compare their aggregate scores. Each region provides a unique insight into health status.  This aggregated data includes all sexes, all ages, and with the most recent Canadian data from the CCHS survey.</p>
+          
+          <p>Browse the map to compare scores across the country. Click on a marker too see details about the make up of the regions score!</p>
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Continue</button>
+          <button type="button" class="btn btn-default btn-raised" data-dismiss="modal">Continue</button>
       </div>
     </div>
   </div>
@@ -81,21 +90,52 @@
 
     <script>$('#welcomeModal').modal();</script>
     
+
+    
+<!-- ABOUT -->
+<div class="modal fade bs-example-modal-lg" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModalLabel" aria-hidden="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h1 class="modal-title" id="aboutModalLabel">Canada Lifestyle & Health Browser
+          <i class="mdi-action-favorite mdi-material-pink"></i><i class="mdi-maps-local-hospital mdi-material-blue"></i><i class="mdi-maps-directions-bike mdi-material-brown"></i><i class="mdi-social-mood mdi-material-orange"></i></h1>
+      </div>
+      <div class="modal-body">
+          <p>This app is designed for those curious about Canadian health populations, by city.  If you are curious to know if where you live determines a health status, this is the right app for you. </p>  
+          <p>You can browse different regions in Canada and compare their aggregate scores. Each region provides a unique insight into health status.  This aggregated data includes all sexes, all ages, and with the most recent Canadian data from the CCHS survey.</p>
+          
+          <h2>About</h2>
+          <p>
+          Created by the Smoulder Collective for <a href="http://www.canadianopendataexperience.ca">CODE 2015 Competition</a>
+          </p>
+          <h3>Included Data Sets:</h3>
+          <p>
+              
+          </p>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-default btn-raised" data-dismiss="modal">Continue</button>
+      </div>
+    </div>
+  </div>
+</div>       
+    
     
     
 <!-- REGION DATA -->
 <div class="modal fade" id="regiondataModal" tabindex="-1" role="dialog" aria-labelledby="regiondataModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="regiondataModalLabel">&nbsp;</h4>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" id="regiondataModalContent">
           
       </div>
       <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-default btn-raised" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -145,12 +185,37 @@ var param_wsId = "1";
 var param_ssKey = "1RHYkfOsmCEnvjh2A3AzSj77Daelo32BD_S6THD6cruI";
 var param_useSidebar = false;
 var param_titleColumn = "geography";
-var param_descriptionColumn = "geography";
+var param_descriptionColumn = "score";
 var param_latColumn = "latitude";
 var param_lngColumn = "longitude";
 var param_rankColumn = "score";
 var param_iconType = "green";
 var param_iconOverType = "blue";
+    
+    var param_scoreCol = "score";
+    var param_ZscoreCol = "z-score";
+    var param_lifeexpectScoreCol = "lifeexpectancyscore";
+    var param_lifeexpectCol = "lifeexpectancy";
+    var param_obeseyouthCol = "notbodymassindexself-reportedyouth12to17yearsoldoverweightorobese";
+    var param_obeseadultCol = "notbodymassindexself-reportedadult18yearsandoveroverweightorobese";
+    var param_asthmaCol = "notasthma";
+    var param_arthritusCol = "notarthritis";
+    var param_bloodpressureCol = "nothighbloodpressure";
+    var param_diabetesCol = "notdiabetes";
+    var param_copdCol = "notcopd";
+    var param_satisfactionCol = "lifesatisfactionsatisfiedorverysatisfied";
+    var param_belongingCol = "senseofbelongingtolocalcommunitysomewhatstrongorverystrong";
+    var param_mooddisorderCol = "notmooddisorder";
+    var param_physicalactivityCol = "physicalactivityduringleisure-timemoderatelyactiveoractive";
+    var param_smokerCol = "notcurrentsmokerdailyoroccasional";
+    var param_fruitvegCol = "fruitandvegetableconsumption5timesormoreperday";
+    var param_drinkingCol = "notheavydrinking";
+    var param_hasdocCol = "hasaregularmedicaldoctor";
+    var param_fluvacCol = "influenzaimmunizationlessthanoneyearago";
+    var param_helmentbikeCol = "wearsahelmetwhenridingabicyclealways";
+    var param_injuriesCol = "notinjuriesinthepast12monthscausinglimitationofnormalactivities";
+    
+    
 
 /**
  * Loads map and calls function to load in worksheet data.
@@ -228,11 +293,177 @@ function cm_loadMapJSON(json) {
       var lat = parseFloat(entry["gsx$" + param_latColumn].$t);
       var lng = parseFloat(entry["gsx$" + param_lngColumn].$t);
       var point = new GLatLng(lat,lng);
+/*///////////////////////////////////////////////////////////////////////////////////*/
+      var modalLabel = entry["gsx$"+param_titleColumn].$t;
+        
+        var modalContent = "<div class='panel panel-default'><div class='panel-heading'>Overall Score</div><div class='panel-body'>" +
+            "<h2 class='text-center smmargin'>" + 
+            parseFloat(entry["gsx$"+param_scoreCol].$t).toFixed(1) + "</h2>" +
+            "<div class='progress progress-striped'>" +
+            "<div class='progress-bar progress-bar-success' style='width: " +
+            entry["gsx$"+param_scoreCol].$t + "%'></div></div>" +
+            
+            "<p class='text-center'>";
+        var zscore = parseFloat(entry["gsx$" + param_ZscoreCol].$t).toFixed(1);
+        if(zscore<0) {
+            modalContent += Math.abs(zscore) + "% below average</p>";
+        }
+        else {
+            modalContent += zscore + "% above average</p>";
+        }
+        modalContent += "</div></div>" +
+        
+        "<div class='container-fluid'><div class='row'><div class='col-sm-6'>" +
+                
+                "<h3>Health</h3>";
+        
+                if($.isNumeric(entry["gsx$"+param_lifeexpectCol].$t)) {
+                   modalContent += "<div class='panel panel-default'><div class='panel-heading'>Life Expectancy</div><div class='panel-body'>" +
+                    "<h4 class='text-center smmargin'>" + 
+            parseFloat(entry["gsx$"+param_lifeexpectCol].$t).toFixed(1) + " years</h4>" +
+            "<div class='progress progress-striped'><div class='progress-bar progress-bar-success' style='width: " +
+            entry["gsx$"+param_lifeexpectCol].$t + "%'></div></div>" +
+                    "</div></div>";
+                   } 
+        
+                if($.isNumeric(entry["gsx$"+param_obeseyouthCol].$t)) {
+                   modalContent += "<div class='panel panel-default'><div class='panel-heading'>Youth Obesity</div><div class='panel-body'>" +
+                    "<h4 class='text-center smmargin'>" + 
+            parseFloat(entry["gsx$"+param_obeseyouthCol].$t).toFixed(1) + "%</h4>" +
+            "<div class='progress progress-striped'><div class='progress-bar progress-bar-success' style='width: " +
+            entry["gsx$"+param_obeseyouthCol].$t + "%'></div></div>" +
+                    "<p class='text-center'>Aged 12-17 are not overweight or obese <br/><small>(Self-reported)</small></p>" +
+                    "</div></div>";
+                   } 
+        
+                if($.isNumeric(entry["gsx$"+param_obeseadultCol].$t)) {
+                   modalContent += "<div class='panel panel-default'><div class='panel-heading'>Adult Obesity</div><div class='panel-body'>" +
+                    "<h4 class='text-center smmargin'>" + 
+            parseFloat(entry["gsx$"+param_obeseadultCol].$t).toFixed(1) + "%</h4>" +
+            "<div class='progress progress-striped'><div class='progress-bar progress-bar-success' style='width: " +
+            entry["gsx$"+param_obeseadultCol].$t + "%'></div></div>" +
+                    "<p class='text-center'>Over the age of 18 are not overweight or obese <br/><small>(Self-reported)</small></p>" +
+                    "</div></div>";
+                } 
+                
+                if($.isNumeric(entry["gsx$"+param_asthmaCol].$t)) {
+                   modalContent += "<div class='panel panel-default'><div class='panel-heading'>Asthma</div><div class='panel-body'>" +
+                    "<h4 class='text-center smmargin'>" + 
+            parseFloat(entry["gsx$"+param_asthmaCol].$t).toFixed(1) + "%</h4>" +
+            "<div class='progress progress-striped'><div class='progress-bar progress-bar-success' style='width: " +
+            entry["gsx$"+param_asthmaCol].$t + "%'></div></div>" +
+                    "<p class='text-center'>Are not affected by Asthma</p>" +
+                    "</div></div>";
+                } 
+        
+                if($.isNumeric(entry["gsx$"+param_bloodpressureCol].$t)) {
+                   modalContent += "<div class='panel panel-default'><div class='panel-heading'>High Blood Pressure</div><div class='panel-body'>" +
+                    "<h4 class='text-center smmargin'>" + 
+            parseFloat(entry["gsx$"+param_bloodpressureCol].$t).toFixed(1) + "%</h4>" +
+            "<div class='progress progress-striped'><div class='progress-bar progress-bar-success' style='width: " +
+            entry["gsx$"+param_bloodpressureCol].$t + "%'></div></div>" +
+                    "<p class='text-center'>Do not have high blood pressure</p>" +
+                    "</div></div>";
+                } 
+                
+                if($.isNumeric(entry["gsx$"+param_diabetesCol].$t)) {
+                   modalContent += "<div class='panel panel-default'><div class='panel-heading'>Diabetes</div><div class='panel-body'>" +
+                    "<h4 class='text-center smmargin'>" + 
+            parseFloat(entry["gsx$"+param_diabetesCol].$t).toFixed(1) + "%</h4>" +
+            "<div class='progress progress-striped'><div class='progress-bar progress-bar-success' style='width: " +
+            entry["gsx$"+param_diabetesCol].$t + "%'></div></div>" +
+                    "<p class='text-center'>Are not affected by Diabetes</p>" +
+                    "</div></div>";
+                } 
+                
+                if($.isNumeric(entry["gsx$"+param_arthritusCol].$t)) {
+                   modalContent += "<div class='panel panel-default'><div class='panel-heading'>Arthritis</div><div class='panel-body'>" +
+                    "<h4 class='text-center smmargin'>" + 
+            parseFloat(entry["gsx$"+param_arthritusCol].$t).toFixed(1) + "%</h4>" +
+            "<div class='progress progress-striped'><div class='progress-bar progress-bar-success' style='width: " +
+            entry["gsx$"+param_arthritusCol].$t + "%'></div></div>" +
+                    "<p class='text-center'>Are not affected by Arthritis</p>" +
+                    "</div></div>";
+                } 
+                        
 
+                if($.isNumeric(entry["gsx$"+param_copdCol].$t)) {
+                   modalContent += "<div class='panel panel-default'><div class='panel-heading'>Chronic Obstructive Pulmonary Disease</div><div class='panel-body'>" +
+                    "<h4 class='text-center smmargin'>" + 
+            parseFloat(entry["gsx$"+param_copdCol].$t).toFixed(1) + "%</h4>" +
+            "<div class='progress progress-striped'><div class='progress-bar progress-bar-success' style='width: " +
+            entry["gsx$"+param_copdCol].$t + "%'></div></div>" +
+                    "<p class='text-center'>Are not affected by Chronic Obstructive Pulmonary Disease (COPD)</p>" +
+                    "</div></div>";
+                } 
+                
+                
+                modalContent += "<h3>Emotion</h3>";
+                
+        
+                if($.isNumeric(entry["gsx$"+param_satisfactionCol].$t)) {
+                   modalContent += "<div class='panel panel-default'><div class='panel-heading'>Life Satisfaction</div><div class='panel-body'>" +
+                    "<h4 class='text-center smmargin'>" + 
+            parseFloat(entry["gsx$"+param_satisfactionCol].$t).toFixed(1) + "%</h4>" +
+            "<div class='progress progress-striped'><div class='progress-bar progress-bar-success' style='width: " +
+            entry["gsx$"+param_satisfactionCol].$t + "%'></div></div>" +
+                    "<p class='text-center'>Are satisfied or very satisfied with life</p>" +
+                    "</div></div>";
+                } 
+                
+                modalContent += regiondataPanel(entry["gsx$"+param_belongingCol].$t, 
+                                        "Sense of Belonging",
+                                        "Have a strong sense of belonging to local community");
+                
+                modalContent += regiondataPanel(entry["gsx$"+param_mooddisorderCol].$t, 
+                                        "Mood Disorders",
+                                        "Do not have mood disorders");
+                
+                    
+            modalContent += "</div>            <div class='col-sm-6'>" +
+                
+                "<h3>Lifestyle</h3>";
+                
+        
+                modalContent += regiondataPanel(entry["gsx$"+param_physicalactivityCol].$t, 
+                                        "Physical Activity",
+                                        "Are active in physical activity during leisure-time");
+                
+                modalContent += regiondataPanel(entry["gsx$"+param_smokerCol].$t, 
+                                        "Smoking",
+                                        "Do not smoke");
+
+                modalContent += regiondataPanel(entry["gsx$"+param_fruitvegCol].$t, 
+                                        "Fruit & Vegetables",
+                                        "Comsume fruit and vegetables 5 times or more per day");
+                
+                modalContent += regiondataPanel(entry["gsx$"+param_drinkingCol].$t, 
+                                        "Heavy Drinking",
+                                        "Are not heavy drinkers of alcohol");
+
+                modalContent += regiondataPanel(entry["gsx$"+param_hasdocCol].$t, 
+                                        "Doctor",
+                                        "Have a regular medical doctor");
+
+                modalContent += regiondataPanel(entry["gsx$"+param_fluvacCol].$t, 
+                                        "Influenza Immunization",
+                                        "Have been immunized for Influenza within the past year");
+
+                modalContent += regiondataPanel(entry["gsx$"+param_helmentbikeCol].$t, 
+                                        "Bike Helments",
+                                        "Wear a helment while bicycling");
+
+                modalContent += regiondataPanel(entry["gsx$"+param_injuriesCol].$t, 
+                                        "Significant Injuries",
+                                        "Have had no significant injuries in the past year");
+
+                
+                    
+            modalContent += "</div></div></div>";
+        
       var html = "<div style='font-size:12px'>";
       html += "<strong>" + entry["gsx$"+param_titleColumn].$t 
               + "</strong>";
-      
         
       var label = entry["gsx$"+param_titleColumn].$t;
       var rank = 0;
@@ -245,7 +476,7 @@ function cm_loadMapJSON(json) {
       html += "</div>";
 
       // create the marker
-      var marker = cm_createMarker(point,label,html,rank);
+      var marker = cm_createMarker(point,label,html,rank,modalLabel,modalContent);
       cm_map.addOverlay(marker);
       cm_mapMarkers.push(marker);
       cm_mapHTMLS.push(html);
@@ -281,7 +512,7 @@ function cm_loadMapJSON(json) {
  * @param {Number} rank Number rank of marker, used in creating icon
  * @return {GMarker} Marker created
  */
-function cm_createMarker(point, title, html, rank) {
+function cm_createMarker(point, title, html, rank, modalLabel,modalContent) {
   var markerOpts = {};
   var nIcon = new GIcon(cm_baseIcon);
 
@@ -302,9 +533,14 @@ function cm_createMarker(point, title, html, rank) {
   markerOpts.icon = nIcon;
   markerOpts.title = title;		 
   var marker = new GMarker(point, markerOpts);
-	
+    
+/*///////////////////////////////////////////////////////////////////////////////////*/	
   GEvent.addListener(marker, "click", function() {
     marker.openInfoWindowHtml(html);
+      $('#regiondataModalLabel').html(modalLabel);
+      $('#regiondataModalContent').html(modalContent);
+      
+      $('#regiondataModal').modal();
   });
   GEvent.addListener(marker, "mouseover", function() {
     marker.setImage(marker.getIcon().imageOver);
@@ -339,6 +575,23 @@ function cm_getJSON() {
   document.documentElement.firstChild.appendChild(script);
 }
 
+    
+function regiondataPanel(entry_param_column, title, moreinfo) {
+    var panelHtml;
+    if($.isNumeric(entry_param_column)) {
+                   panelHtml = "<div class='panel panel-default'><div class='panel-heading'>" +
+                    title + "</div><div class='panel-body'>" +
+                    "<h4 class='text-center smmargin'>" + 
+            parseFloat(entry_param_column).toFixed(1) + "%</h4>" +
+            "<div class='progress progress-striped'><div class='progress-bar progress-bar-success' style='width: " +
+            entry_param_column + "%'></div></div>" +
+                    "<p class='text-center'>" + moreinfo + "</p>" + "</div></div>";
+    }
+    
+    return panelHtml;
+}
+    
+    
 setTimeout('cm_load()', 500); 
 
 //]]>
